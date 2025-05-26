@@ -2,7 +2,7 @@
 // src/components/Navbar.jsx
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import "../Portfolio-styles.css";
+import '../Portfolio-styles.css';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
