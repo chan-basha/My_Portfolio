@@ -1,0 +1,87 @@
+
+/* File: src/styles/ProjectCard.css */
+.projects-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #fdfcff, #eef3f9);
+  min-height: 100vh;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Force max 2 columns on desktop */
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(12px);
+backdrop-filter: blur(12px);
+
+  border-radius: 1.25rem;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  background: #e6f0ff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.project-card .description {
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.project-card .tech {
+  font-size: 0.8rem;
+  color: #0077cc;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #0056b3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.github-link:hover {
+  color: #003a80;
+}
+
+.github-link .icon {
+  margin-left: 6px;
+}
