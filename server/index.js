@@ -7,7 +7,9 @@ import contactRouter from './routes/contact.js';
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://chanbasha-portfolio.vercel.app'
+}));
 app.use(express.json());
 
 app.use('/api/contact', contactRouter);
